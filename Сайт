@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Простой сайт с картинкой</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #6a0dad;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color:aliceblue;
+    }
+    h1 {
+      color: rgb(255, 255, 255);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    p {
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    div button {
+      color:#d9ff00
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #28a745;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #message.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Добро пожаловать на мой сайт!</h1>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Природа" />
+  <p>Это простой пример одностраничного сайта с кнопкой и картинкой.</p>
+  <button id="myButton"><div id="message">Спасибо за нажатие!</div></button>
+  <div id="message">Спасибо за нажатие!</div>
+
+  <script>
+    const button = document.getElementById('myButton');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      message.classList.add('show');
+      setTimeout(() => {
+        message.classList.remove('show');
+      }, 2000);
+    });
+  </script>
+  <div><button>hello</button></div>
+</body>
+</html>
 
